@@ -2,14 +2,27 @@ body {
         background-image: url("wallp.jpg");
         background-repeat: no-repeat;
         background-attachment: fixed;
-        height: 100%;
+        height: 100vh;
 }
-
-
+div.tableABOUT {
+  width:100%;
+  text-align: middle;
+  position: relative;
+  bottom:560px;
+  left:20%;
+}
+div.boxmodel1 {
+  background-color: white;
+  width: 50%;
+  height: 100%;
+  border: 25px solid black;
+  padding: 25px;
+  margin-left:25%;
+}
 div.boxmodel {
   background-color: white;
   width: 600px;
-  height: 800px;
+  height: 100%;
   border: 25px solid black;
   padding: 25px;
   margin: 25px;
@@ -55,7 +68,7 @@ ul.index {
     color: black;
 }
 
-img.dmytro {
+.imgDmytro {
     position: relative;
-    left: 200px;
+    left: 5%;
 }

@@ -20,7 +20,22 @@
             <div class="relativeForP"><font size="5"><p>This an landing page i`ve made for Grand Beatbox Battle Announcement</p></font></div></center>    
         <center><div class="boxmodel">
                 <center><div class="relativeForH2"><font size="7"><div><ins><h2>Grand Beatbox Battle</h2></ins></font></div>
+<script>
+var slideIndex = 0;
+carousel();
 
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}
+  x[slideIndex-1].style.display = "block";
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
                 <img class="mySlides" src="photo1.jpg" style="width:40%">
                 <img class="mySlides" src="photo2.jpg" style="width:40%">
                 <img class="mySlides" src="photo3.jpg" style="width:40%">
@@ -135,12 +150,12 @@ function myFunction() {
             <a href="https://www.facebook.com/grandbeatboxbattle/?tn-str=k*F" target="_blank">GBB Facebook</a>
             <a href="https://www.instagram.com/grand.beatbox.battle/" target="_blank">GBB Instagram</a>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKuDkn2mr5i-c5T-0Ogz_pNf10gYqwE3LYj238BBy2H9Jepg/viewform?usp=sf_link" target="_blank">Google Form</a>
+            <a href="https://analytics.google.com/analytics/web/#/report-home/a139122191w199870762p194216365" target="_blank">Google Analytics</a>
           </center>
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d81987.56453511113!2d19.934833796941522!3d50.046744576999416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471644c0354e18d1%3A0xb46bb6b576478abf!2zS3Jha8OzdywgUG9sYW5k!5e0!3m2!1sen!2sua!4v1556267129328!5m2!1sen!2sua" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
           
           <center><div class="relativeForH2"><font size="7"><div><ins><h2>Flex Box</h2></ins></font></div>
           <div class="flex-container">
-              
                 <div>1</div>
                 <div>2</div>
                 <div>3</div>
@@ -155,10 +170,6 @@ function myFunction() {
                 <div>12</div>
                 <div>13</div>
                 <div>14</div>
-
-
               </div> 
-
-</body>
-
+            </body>
 </html>

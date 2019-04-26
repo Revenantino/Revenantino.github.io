@@ -99,3 +99,14 @@ a:link, a:visited {
         height: 400px;  /* The height is 400 pixels */
         width: 100%;  /* The width is the width of the web page */
        }
+       .flex-container {
+        display: flex;
+        background-color: DodgerBlue;
+      }
+      
+      .flex-container > div {
+        background-color: #000000;
+        margin: 10px;
+        padding: 20px;
+        font-size: 30px;
+      }

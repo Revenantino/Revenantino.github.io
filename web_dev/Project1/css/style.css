@@ -35,6 +35,10 @@ div.relativeForP {
   position: relative;
   top: -70px;
 }
+div.relativeForH2 {
+  position: relative;
+  top: -40px;
+}
 ul.index {
     position: relative;
     top: -120px;

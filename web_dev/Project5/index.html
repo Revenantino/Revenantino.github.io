@@ -149,7 +149,6 @@ function myFunction() {
     <center>
             <a href="https://www.facebook.com/grandbeatboxbattle/?tn-str=k*F" target="_blank">GBB Facebook</a>
             <a href="https://www.instagram.com/grand.beatbox.battle/" target="_blank">GBB Instagram</a>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKuDkn2mr5i-c5T-0Ogz_pNf10gYqwE3LYj238BBy2H9Jepg/viewform?usp=sf_link" target="_blank">Google Form</a>
             <a href="https://analytics.google.com/analytics/web/#/report-home/a139122191w199870762p194216365" target="_blank">Google Analytics</a>
           </center>
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d81987.56453511113!2d19.934833796941522!3d50.046744576999416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471644c0354e18d1%3A0xb46bb6b576478abf!2zS3Jha8OzdywgUG9sYW5k!5e0!3m2!1sen!2sua!4v1556267129328!5m2!1sen!2sua" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -171,5 +170,130 @@ function myFunction() {
                 <div>13</div>
                 <div>14</div>
               </div> 
+              <div>
+                    <input type="checkbox" class="read-more-state" id="post-1" />
+                  
+                    <p class="read-more-wrap"><span class="read-more-target"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeKuDkn2mr5i-c5T-0Ogz_pNf10gYqwE3LYj238BBy2H9Jepg/viewform" width="640" height="482" frameborder="0" marginheight="0" marginwidth="0">Завантаження...</iframe></span></p>
+                    
+                    <label for="post-1" class="read-more-trigger"></label>
+                  </div>
+                  <center><div class="relativeForH1"><font size="7"><div><ins><h1>LABA5</h1></ins></font></div>
+                  <center><div class="relativeForH1"><font size="5"><div><ins><h1>Javascript</h1></ins></font></div>
+                    <form id="myForm" action="/action_page.php">
+                      First name  : <input type="text" name="fname" required><br>
+                      Last name   : <input type="text" name="lname" required><br>
+                      Age         : <input type="number" name="age" required><br>
+                      Country code(ISO): <input type="text" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code"><br>
+                      <script type= "text/javascript" src = "countries.js"></script>
+	                    Select Country (with states):   <select id="country" name ="country"></select></br>
+                      Select State: <select name ="state" id ="state"></select> </br>
+                      Ticket type: <input type="checkbox" name="check1">Blue
+                      <input type="checkbox" name="check1">Green
+                      <input type="checkbox" name="check1">Red<br>
+                      E-mail: <input type="email" value="support@example.com"><br>
+                      <input type="button" onclick="validateForm()" value="Submit">
+                    </form><br><br></br>
+                    <script language="javascript">
+                      populateCountries("country", "state"); // first parameter is id of country drop-down and second parameter is id of state drop-down
+                    </script>
+                    
+                    <script>
+                      function validateForm() {
+                        var x = document.forms["myForm"]["fname"].value;
+                        var y = document.forms["myForm"]["lname"].value;
+                        var n = document.forms["myForm"]["age"].value;
+                        if(x == "" && y == "" && n == ""){
+                          alert("All fields must be filled out!");
+                          return false;
+                        } 
+                        if(x == "" && y == ""){
+                          alert("Name and Last name are required fields!")
+                          return false;
+                        }    
+                        if (x == "") {
+                          alert("Name must be filled out!");
+                          return false;
+                        }
+                        if (y == "") {
+                          alert("Last name must be filled out!");
+                          return false;
+                        }
+                        if (n == "") {
+                          alert("Age must be filled out");
+                          return false;
+                        }else if(n < 18){
+                          alert("You must be at least 18 y.o");
+                          return false;
+                        } 
+                      } 
+                      </script>
+                      <center><div class="relativeForH1"><font size="5"><div><ins><h1>Drag and Drop</h1></ins></font></div></center>
+                        <script>
+                            function allowDrop(ev) {
+                              ev.preventDefault();
+                            }
+                            function drag(ev) {
+                              ev.dataTransfer.setData("text", ev.target.id);
+                            }
+                            function drop(ev) {
+                              ev.preventDefault();
+                              var data = ev.dataTransfer.getData("text");
+                              ev.target.appendChild(document.getElementById(data));
+                            }
+                            </script>
+                            
+                  
+                            <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            <img id="cat" src="css/cat1.gif" draggable="true" ondragstart="drag(event)" id="drag1" width="100" height="100"></img>
+                          </div>
+                          <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                          
+                          
+                          
+<script>
+var myElement = document.querySelector("#cat"); 
+var position;
+function doSomething(e) {
+        
+    position = getPosition(myElement);
+    alert("The image is located at: " + position.x + ", " + position.y);
+}
+
+// deal with the page getting resized or scrolled
+window.addEventListener("scroll", updatePosition, false);
+window.addEventListener("resize", updatePosition, false);
+
+function updatePosition() {
+  position = getPosition(myElement);
+}
+
+// helper function to get an element's exact position
+function getPosition(el) {
+  var xPosition = 0;
+  var yPosition = 0;
+
+  while (el) {
+    if (el.tagName == "BODY") {
+      // deal with browser quirks with body/window/document and page scroll
+      var xScrollPos = el.scrollLeft || document.documentElement.scrollLeft;
+      var yScrollPos = el.scrollTop || document.documentElement.scrollTop;
+
+      xPosition += (el.offsetLeft - xScrollPos + el.clientLeft);
+      yPosition += (el.offsetTop - yScrollPos + el.clientTop);
+    } else {
+      xPosition += (el.offsetLeft - el.scrollLeft + el.clientLeft);
+      yPosition += (el.offsetTop - el.scrollTop + el.clientTop);
+    }
+
+    el = el.offsetParent;
+  }
+  return {
+    x: xPosition,
+    y: yPosition
+  };
+}
+                          </script>
+                          <br><br><br><br><br><br><br><br>
+                          <button onclick="doSomething()">Click me</button>
             </body>
 </html>

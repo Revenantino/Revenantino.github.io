@@ -13,8 +13,8 @@
         echo 'You should select a file to upload !!';
     }
 }
-// $image = $temp_name;
-//echo $image;
+$image = $temp_name;
+echo $image;
 ?>
 <img src="<?php echo $location.$name; ?>">
 </body>

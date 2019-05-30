@@ -294,6 +294,47 @@ function getPosition(el) {
 }
                           </script>
                           <br><br><br><br><br><br><br><br>
-                          <button onclick="doSomething()">Click me</button>
+                          <button id="catid" onclick="doSomething()">Click me</button><br><br><br><br>
+                          <center><div class="relativeForH1"><font size="5"><div><ins><h1>Web Storage</h1></ins></font></div></center>
+                          <script src="main.js"></script>
+                          <div>
+                          <label for="image">Choose image:</label>
+                          <select id="image">
+                            <option value="css/ginger.png" selected="">Ginger Cat</option>
+                            <option value="css/british.png">British Cat</option>
+                            <option value="css/black.png">Black Cat</option>
+                          </select>
+                          <br><br><br><br>
+                          <img src="css/ginger.png">
+                          </div>
+                          <br><br><br><br>
+                          <center><div class="relativeForH1"><font size="5"><div><ins><h1>Web Worker</h1></ins></font></div></center>
+                         
+
+
+                          <script>
+                            var w;
+                            function startWorker() {
+                              if(typeof(Worker) !== "undefined") {
+                                if(typeof(w) == "undefined") {
+                                  w = new Worker("worker.js");
+                                }
+                                w.onmessage = function(event) {
+                                  document.getElementById("result").innerHTML = event.data;
+                                };
+                              } else {
+                                document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Workers...";
+                              }
+                            }
+                            function stopWorker() { 
+                              w.terminate();
+                              w = undefined;
+                            }
+
+                            </script>
+                          <p>Count numbers: <output id="result"></output></p>
+                          <button onclick="startWorker()">Start Worker</button>
+                          <button onclick="stopWorker()">Stop Worker</button>
+
             </body>
 </html>

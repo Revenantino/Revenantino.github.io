@@ -44,13 +44,14 @@ body {
         border-right: none;
     }
     div.boxmodel {
-        background-color:rgba(199, 123, 209, 0.6);
+        background-color:rgba(255, 36, 182, 0.24);
         width: 60%;
         height: 100%;
         border: 25px solid black;
         padding: 25px;
         margin: 25px;
       }  
+
       div.relativeForH1 {
         position: relative;
         top: -40px;
@@ -111,7 +112,7 @@ a:link, a:visited {
         font-size: 30px;
       }
       input:valid {
-        background-color: yellow;
+        background-color: pink;
       }
       #div1, #div2{
         position: relative;
@@ -125,9 +126,9 @@ a:link, a:visited {
         padding: 10px;
         border: 3px solid black;
       }
-      button{
+      #catid {
          position: absolute;
-      left: 45%;
+         left: 45%;
       right: 55%;
       width: 10%;
       }

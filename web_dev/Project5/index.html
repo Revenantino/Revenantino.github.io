@@ -13,6 +13,13 @@
 </script>
 
     <link rel="stylesheet" href="css/styles.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link href="style.css" rel="stylesheet">
+    <script type="text/javascript" src="http://code.jQuery.com/jQuery-1.7.2.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 </head>
 <body>
         <center><div class="relativeForH1"><font size="7"><div><ins><h1>Landing Page</h1></ins></font></div>
@@ -36,10 +43,10 @@ function carousel() {
   setTimeout(carousel, 2000); // Change image every 2 seconds
 }
 </script>
-                <img class="mySlides" src="photo1.jpg" style="width:40%">
-                <img class="mySlides" src="photo2.jpg" style="width:40%">
-                <img class="mySlides" src="photo3.jpg" style="width:40%">
-                <img class="mySlides" src="photo4.jpg" style="width:40%">
+                <img class="mySlides" src="css/cat1.jpg" style="width:40%">
+                <img class="mySlides" src="css/cat2.jpg" style="width:40%">
+                <img class="mySlides" src="css/cat3.jpg" style="width:40%">
+                <img class="mySlides" src="css/cat4.jpg" style="width:40%">
                 <center><table class="zui-table zui-table-zebra zui-table-horizontal">
                     <thead>
                         <tr>
@@ -296,17 +303,30 @@ function getPosition(el) {
                           <br><br><br><br><br><br><br><br>
                           <button id="catid" onclick="doSomething()">Click me</button><br><br><br><br>
                           <center><div class="relativeForH1"><font size="5"><div><ins><h1>Web Storage</h1></ins></font></div></center>
-                          <script src="main.js"></script>
+
+                          <form name="form1">
+                              <input type="text" name="text1" placeholder="Enter text...">
+                              <br>
+                              <input type="button" value="Assign" onClick="AssignValues()">
+                              <br>
+                              <input type="button" value="Show" onClick="Value1()">
+                              <br>
+                              <input type="button" value="Delete" onClick="Delete1()">
+                              <br>
                           <div>
                           <label for="image">Choose image:</label>
                           <select id="image">
                             <option value="css/ginger.png" selected="">Ginger Cat</option>
                             <option value="css/british.png">British Cat</option>
-                            <option value="css/black.png">Black Cat</option>
+                            <option value="css/black.gif">Black Cat</option>
+                                <footer></footer>
                           </select>
                           <br><br><br><br>
-                          <img src="css/ginger.png">
+                        
                           </div>
+                        </form>
+                        <footer></footer>
+                        <img src="css/british.png">
                           <br><br><br><br>
                           <center><div class="relativeForH1"><font size="5"><div><ins><h1>Web Worker</h1></ins></font></div></center>
                          
@@ -335,6 +355,121 @@ function getPosition(el) {
                           <p>Count numbers: <output id="result"></output></p>
                           <button onclick="startWorker()">Start Worker</button>
                           <button onclick="stopWorker()">Stop Worker</button>
-
+                          <br><br><br><br>
+                          <center><div class="relativeForH1"><font size="5"><div><ins><h1>AJAX</h1></ins></font></div></center>
+                          <div class="container-fluid">
+                              <div class="row text-center">
+                                  <div class="col-12">
+                                      <div class="ajax_container">
+                                          <form class="ajax_item" name="ajax_form">
+                                              <input id="data_url" type="text" name="data_url" value="https://httpbin.org/get">
+                                          </form>
+                                          <div class="ajax_item">
+                                              <a class="waves-effect waves-light btn" onclick="get_ajax('text')"><button>Request_text</button></a>
+                                              <a class="waves-effect waves-light btn" onclick="get_ajax('status')"><button>Request_status</button></a>
+                                              <a class="waves-effect waves-light btn" onclick="get_ajax('headers')"><button>Request_headers</button></a>
+                                          </div>
+                                          <div class="ajax_item" id="aj_cont"></div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <br><br><br><br>
+                          <center><div class="relativeForH1"><font size="5"><div><ins><h1>jQuery</h1></ins></font></div></center>
+                            <div class="container-fluid">
+                              <div class="row text-center">
+                                  <div class="col-6">
+                                      <h1>JQuery Hide/Show</h1>
+                                      <div>
+                                          <button id="hide" style="margin-bottom: 10px">Hide</button>
+                                          <button id="show" style="margin-bottom: 10px">Show</button>
+                                      </div>
+                                      <img id="toggle" src="css/catsgif.gif">
+                                  </div>
+                                  <div class="col-6">
+                                      <h1>JQuery FadeIn/Out</h1>
+                                      <div>
+                                          <button id="fadeIn" style="margin-bottom: 10px">Show up</button>
+                                          <button id="fadeOut" style="margin-bottom: 10px">Fade</button>
+                                      </div>
+                                      <img id="toggle1" src="css/ginger.png">
+                                  </div>
+                              </div>
+                          </div>
+                          <!--- JQuery Slide Animate -->
+                          <div class="container-fluid">
+                              <div class="row text-center">
+                                  <div class="col-6">
+                                      <h1>JQuery Slide</h1>
+                                      <div>
+                                          <button id="flip" style="margin-bottom: 10px">Slide the image</button>
+                                      </div>
+                                      <img id="panel" src="css/british.png">
+                                  </div>
+                                  <div class="col-6">
+                                      <h1>JQuery Animate</h1>
+                                      <div>
+                                          <button id="animate" style="margin-bottom: 10px">Animate the image</button>
+                                      </div>
+                                      <img id="animate1" src="css/balck2.png">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="container-fluid">
+                              <div class="row text-center">
+                                  <div class="col-6">
+                                      <h1>JQuery Stop</h1>
+                                      <div>
+                                          <button id="start" style="margin-bottom: 10px">Click to start the animation</button>
+                                          <button id="stop" style="margin-bottom: 10px">Click to stop the animation</button>
+                                      </div>
+                                      <img id="stop1" src="css/kitten.png">
+                                  </div>
+                                  <div class="col-6">
+                                      <h1>JQuery Callback</h1>
+                                      <div>
+                                          <button id="callback" style="margin-bottom: 10px">Callback</button>
+                                      </div>
+                                      <img id="callback1" src="css/jump.png">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="container-fluid">
+                              <div class="row text-center">
+                                  <div class="col-12">
+                                      <h1>JQuery Chaining</h1>
+                                      <div>
+                                          <button id="chain" style="margin-bottom: 10px">Start chaining</button>
+                                      </div>
+                                      <img id="chain1" src="css/cry.png">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="container-fluid">
+                              <div class="row text-center">
+                                  <div class="col-12">
+                                      <center><div class="relativeForH1"><font size="5"><div><ins><h1>AJAX + JSON</h1></ins></font></div></center>
+                                      <div class="json_content">
+                                          <a id="get_ip"><button style="margin-bottom: 10px">Get IP</button></a>
+                                          <div id="ip_div"></div>
+                                          <a id="get_headers"><button style="margin-bottom: 10px">Get headers</button></a>
+                                          <div id="headers_div"></div>
+                                          <a id="get_date"><button style="margin-bottom: 10px">Get date</button></a>
+                                          <div id="date_div"></div>
+                                          <a id="get_echo"><button style="margin-bottom: 10px">Get echo</button></a>
+                                          <div id="echo_div"></div>
+                                          <a id="get_valid"><button style="margin-bottom: 10px">Get validation</button></a>
+                                          <div id="valid_div"></div>
+                                          <a id="get_js_code"><button style="margin-bottom: 10px">Get js_code</button></a>
+                                          <div id="js_code_div"></div>
+                                          <a id="get_md5"><button style="margin-bottom: 10px">Get md5</button></a>
+                                          <div id="md5_div"></div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <script src="main.js"></script>
+                          <script type="text/javascript" src="script.js"></script>
             </body>
+          
 </html>
